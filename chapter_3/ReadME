@@ -1,0 +1,8 @@
+#
+# Thinking in JAVA 笔记及后感：* 第3章：操作符
+#
+
+# 静态导入:JavaSE5 新加。第6章介绍
+import static packageName;
+
+#

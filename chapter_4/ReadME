@@ -1,0 +1,20 @@
+#
+# Thinking in JAVA 笔记及后感：* 第4章：控制执行流程
+#
+
+## Java不允许用一个非bool类型的数据来做条件判断的bool值（C++中是可以的，Java中不可以）。
+
+# Java中不直接支持goto语句，goto在某些情况下十分的好用，但是滥用会导致代码的难维护跳转混乱。Java有类似goto那样的跳转，但是是一种限制的goto:标签。
+  使用方式：@see:chapter_4/Chapter4.java
+  不推荐使用标签，标签的作用主要是用来适用于要从内层循环跳出外层循环的这种特殊情况才使用的。
+
+## foreach
+  可以作用于任何Iterable对象：数组，容器等对象。
+  for(int x: int数组){
+      //code
+  }
+
+## switch-case
+  1.旧版本的jdk只允许使用整数值类型的（int,char）来做switch条件，新的jdk可以用string。
+  2.程序与case各个分支比对，发现相符的执行相符的那个case开始向下执行，直到遇到break。如果没有相符的执行default里面的内容。
+  3.可以使用enum来结合使用。

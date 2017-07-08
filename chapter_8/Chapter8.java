@@ -37,12 +37,11 @@ class Son extends Father{
     @Override
     public int getField(){
         /**
-         * 有待争议：！！？？
-         * 调用该方法的时候确实发生了多态！
-         * 但是多态只是相当于将父类的方法给替换了，但执行的所有逻辑都是在父类中执行的，不会说执行该方法的时候跳到该类中运行，等运行完再回到父类（错误理解）！
+         *
          * 所以可以想象，多态只是简单的代码的替换（把这个方法覆盖父类的），不会涉及内存的交错使用！
          * */
         return field;
+//        return field2; // 可以返回Son内存中的2，所以说f不是只在Father代码中的，还是两个类相结合进行运行的。--该测试和重载多态无关
     }
     public int getFatherField(){
         return super.field;
